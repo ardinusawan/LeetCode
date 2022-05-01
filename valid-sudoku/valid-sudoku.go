@@ -1,7 +1,7 @@
 func isValidSudoku(board [][]byte) bool {
     rows := make(map[int][]string, len(board))
     cols := make(map[int][]string, len(board[0]))
-    squares := make(map[int]map[int][]string, len(board)/3)
+    squares := make(map[int]map[int][]string, len(board)/3) // to check every 3x3 box
     for i, _ := range board {
         squares[i] = make(map[int][]string, len(board[i])/3)
     }
@@ -15,7 +15,9 @@ func isValidSudoku(board [][]byte) bool {
                 continue
             }
             
-            if contains(v, rows[r]) || contains(v, cols[c]) || contains(v, squares[r/3][c/3]) {
+            if contains(v, rows[r]) || // if value already in row
+                contains(v, cols[c]) || // if value already in column
+            contains(v, squares[r/3][c/3]) { // if value already in 3x3 box
                 return false
             }
             
