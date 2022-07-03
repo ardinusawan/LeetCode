@@ -1,5 +1,5 @@
 import (
-"fmt"
+  "fmt"
 )
 
 func runningSum(nums []int) []int {
