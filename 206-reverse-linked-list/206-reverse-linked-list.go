@@ -10,6 +10,7 @@ import "fmt"
 
 func reverseList(head *ListNode) *ListNode {
     // iterative
+    // T O(n), M O(1)
     var prev *ListNode
     curr := head
     
@@ -21,4 +22,19 @@ func reverseList(head *ListNode) *ListNode {
     }
     
     return prev
+    
+    // recursive
+    // T O(n), M O(n)
+//     if head == nil {
+//         return nil
+//     }
+    
+//     newHead := head
+//     if head.Next != nil {
+//         newHead = reverseList(head.Next)
+//         head.Next.Next = head
+//     }
+//     head.Next = nil
+    
+//     return newHead
 }
