@@ -7,27 +7,33 @@
  * }
  */
 
+import "fmt"
+
 func levelOrder(root *TreeNode) [][]int {
-    mapper := make(map[int][]int)
-    dfs(root, 0, mapper)
-    result := make([][]int, len(mapper))
-    for i, v := range(mapper) {
-        result[i] = v
+    return bfs(root, 0, [][]int{})
+}
+
+func bfs(root *TreeNode, level int, result [][]int) [][]int {
+    if root == nil {
+        return result
+    }
+    
+    if len(result) == level {
+        result = append(result, []int{root.Val})    
+    } else {
+        result[level] = append(result[level], root.Val)
+    }
+    
+    level += 1
+    if root.Left != nil {
+        left := bfs(root.Left, level, result)    
+        result = left
+    }
+    
+    if root.Right != nil {
+        right := bfs(root.Right, level, result)
+        result = right
     }
     
     return result
-}
-
-func dfs(root *TreeNode, level int, mapper map[int][]int) {
-    if root == nil {
-        return
-    }
-    mapper[level] = append(mapper[level], root.Val)
-    
-    if root.Left != nil {
-        dfs(root.Left, level+1, mapper)
-    }
-    if root.Right != nil {
-        dfs(root.Right, level+1, mapper)
-    }
 }
