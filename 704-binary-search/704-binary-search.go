@@ -1,7 +1,3 @@
-import "fmt"
-
-var beenThere map[int]bool
-
 func search(nums []int, target int) int {
     // iterative binary search
     // cause we need the index
