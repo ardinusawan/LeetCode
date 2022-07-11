@@ -21,6 +21,7 @@ func floodFill(image [][]int, sr int, sc int, color int) [][]int {
     return img
 }
 
+// paints is dfs func to fill color 4-directionally
 func paints(r, c int) {
     if img[r][c] == initColor {
         img[r][c] = newColor
