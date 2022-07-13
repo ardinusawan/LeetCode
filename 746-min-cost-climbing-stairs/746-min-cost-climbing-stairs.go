@@ -1,3 +1,4 @@
+// calculation start from last 3 element
 func minCostClimbingStairs(cost []int) int {
     for i:=len(cost)-3;i>=0;i--{
         if cost[i + 1] < cost[i + 2] {
