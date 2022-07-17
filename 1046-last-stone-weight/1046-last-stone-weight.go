@@ -30,7 +30,6 @@ func (h MaxHeap) Less(i, j int) bool { return h.IntHeap[i] > h.IntHeap[j] }
 
 func lastStoneWeight(stones []int) int {
     h := &MaxHeap{stones}
-    fmt.Println(h)
     heap.Init(h)
     for h.Len() > 1 {
         first := heap.Pop(h).(int)
@@ -40,7 +39,6 @@ func lastStoneWeight(stones []int) int {
         }
     }
     
-    fmt.Println(h, stones)
     heap.Push(h, 0) // edge case: if heap is empty
     return h.IntHeap[0]
 }
