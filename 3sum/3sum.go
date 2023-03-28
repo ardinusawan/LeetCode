@@ -4,7 +4,7 @@ import (
 )
 
 func threeSum(nums []int) [][]int {
-    // sort nums
+    // first, sort nums
     // 3 pointer. v(current value), l(left), r(right)
     // init: i=0, v = nums[i], l = nums[i+1], r=nums[length-1]
     // if a same with prev value, skip
