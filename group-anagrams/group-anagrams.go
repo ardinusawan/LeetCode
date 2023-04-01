@@ -4,7 +4,7 @@ func groupAnagrams(strs []string) [][]string {
     // create hash map and use that list as key
     // result = iterate every values in map
 
-    result := make(map[[26]int][]string)
+    result := make(map[[26]int][]string)  // {[1,0,0,1]: ["eat","tea"]}
     for _, v := range strs {
         count := [26]int{} // use array instead of slice
 
