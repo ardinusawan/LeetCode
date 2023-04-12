@@ -12,8 +12,8 @@ func longestCommonPrefix(strs []string) string {
         return result
     }
     
-    for i := range strs[0] { // flower
-        for _, s := range strs { // ["flower","flow","flight"]
+    for i := range strs[0] {
+        for _, s := range strs {
                if (i == len(s) || s[i] != strs[0][i]) {
                 return result
             }
