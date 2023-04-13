@@ -2,7 +2,7 @@ func increasingTriplet(nums []int) bool {
     // init two variable, first and second with max value
     // iterate nums. for each element do check
     // if current elem < first? -> first = elem
-    // else if current elem > first BUT current < second? -> second = current elem
+    // else if current elem > first AND current < second? -> second = current elem
     // check if first > second > current elem
     
     if len(nums) < 3 {
