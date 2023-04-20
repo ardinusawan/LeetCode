@@ -1,3 +1,10 @@
+// iterate for range n
+// init base result to "1"
+// start iteration from i=1 until i==n
+// for every walk, store uniq value found until now.
+// when previous value is different with current, then append result to uniq value found + previous uniq value.
+// when hit end of result, do same thing like before
+
 import (
     "strconv"
 )
