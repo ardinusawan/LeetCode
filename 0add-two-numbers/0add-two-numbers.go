@@ -1,3 +1,8 @@
+// while l1 or l2 is not nil, iterate it
+// when one of it nil, sum with 0
+// for every sum, add previous adder. adder = sum / 10
+// when both l1 and l2 is nil but adder > 0, next node Val is adder itself
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
