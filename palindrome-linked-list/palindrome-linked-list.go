@@ -1,3 +1,7 @@
+// action: 
+// 1. find middle value, reverse linked list from there.
+// 2. iterate from start to middle, and middle to end to find unmatched value
+// details:
 // two pointer, fast and slow
 // fast walk two node, slow one node
 // when fast is nil, walk must be located in the middle
