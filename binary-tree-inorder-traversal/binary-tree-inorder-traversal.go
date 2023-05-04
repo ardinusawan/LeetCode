@@ -1,4 +1,6 @@
-// recursive
+// recursive dfs
+// go to farther left first, when reach nil append root.Val to result
+// then go to right node
 
 /**
  * Definition for a binary tree node.
@@ -12,16 +14,16 @@ var result []int
 
 func inorderTraversal(root *TreeNode) []int {
     result = []int{}
-    inorder(root)
+    dfs(root)
 
     return result
 }
 
-func inorder(root *TreeNode) {
+func dfs(root *TreeNode) {
     if root == nil {
         return
     }
-    inorder(root.Left)
+    dfs(root.Left)
     result = append(result, root.Val)
-    inorder(root.Right)
+    dfs(root.Right)
 }
