@@ -1,6 +1,8 @@
 // dfs and store value in stack (array)
-// fill array from left, node, right
-// if len(array) == k, return top
+// when root.Left != nil, go to the left again
+// when root.Left = nil, append current node
+// when root.Right != nil, go to the right again
+// if len(array) == k, stop. Result it top of array
 
 /**
  * Definition for a binary tree node.
