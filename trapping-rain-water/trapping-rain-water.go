@@ -1,12 +1,7 @@
 // pointer: left = 0, right = len(height)-1
 // maxLeft = height[0], maxRight = height[-1]
-// for left < right
-//  if height[left] < height[right]:
-//    result += max(maxLeft - height[i], 0)
-//    left++
-//  else
-//    result += max(maxRight - height[i], 0)
-//    right--
+// main idea: for left < right, find distance between maxValue - currentVal. Do this thing from left and right pointer
+// when height[left] < height[right], left++ and vice versa
 
 func trap(height []int) int {
     left, right := 0, len(height)-1
