@@ -34,9 +34,6 @@ func checkInclusion(s1 string, s2 string) bool {
         s2Count[index]++
         if s1Count[index] == s2Count[index] { 
             matches++
-        // } else {
-        //     matches--
-        // }
         } else if s1Count[index] + 1 == s2Count[index] {
             matches--
         }
@@ -45,9 +42,6 @@ func checkInclusion(s1 string, s2 string) bool {
         s2Count[index2]--
         if s1Count[index2] == s2Count[index2] { 
             matches++
-        // } else {
-        //     matches--
-        // }
         } else if s1Count[index2] - 1 == s2Count[index2] {
             matches--
         }
