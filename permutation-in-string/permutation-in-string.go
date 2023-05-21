@@ -1,3 +1,11 @@
+// If the length of s1 is greater than s2, return false.
+// Initialize count maps for s1 and s2 with a size of 26.
+// Count the occurrences of each character in the initial window of s1 and s2.
+// Check if the counts of all characters in s1 and s2 are the same. Increment matches for each match.
+// Slide the window over s2, updating the counts accordingly.
+// If matches reaches 26, return true.
+// If a character count in s2 is one more or one less than its count in s1, decrement matches.
+// Return false if no match is found.
 func checkInclusion(s1 string, s2 string) bool {
     if len(s1) > len(s2) {
         return false
