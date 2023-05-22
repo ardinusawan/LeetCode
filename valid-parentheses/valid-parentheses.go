@@ -1,3 +1,10 @@
+// create stack data structure with byte as value
+// implement Push, Pop, IsEmpty
+// when open bracket, push. 
+// when pair is correct, pop.
+// else, return false
+// in the end, if stack not empty return false
+
 type Stack []byte
 
 func (s *Stack) Push(value byte) {
@@ -27,10 +34,12 @@ func isValid(s string) bool {
             stack.Push(v)
             continue
         }
+
+        // below code is try to pop(). when it empty, nothing can be popped hence it must be fail
         if stack.IsEmpty() {
             return false
         }
-        
+
         if v == ')' && stack[len(stack)-1] == '(' {
             stack.Pop()
         } else if v == '}' && stack[len(stack)-1] == '{' {
