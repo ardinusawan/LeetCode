@@ -1,3 +1,16 @@
+// MinStack have Values and MinValue
+// Init Values = []int{}, MinValue = MaxInt
+// when Push:
+//   if MinValue >= val, replace MinValue with val
+//      append prev MinValue to stack
+// when Pop:
+//   get curentTop, remove last data from Values
+//   if new Values last data is current MinValue, 
+//      if stack not empty
+//        new MinValue = last data in stack
+//        new stack = remove last data in stack
+//      else MinValue = MaxInt
+
 import (
     "math"
 )
