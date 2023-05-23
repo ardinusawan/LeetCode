@@ -1,5 +1,6 @@
 // MinStack have Values and MinValue
 // Init Values = []int{}, MinValue = MaxInt
+// Tips: push MinValue to stack, before pushing new Value to keep in track MinValues
 // when Push:
 //   if MinValue >= val, replace MinValue with val
 //      append prev MinValue to stack
