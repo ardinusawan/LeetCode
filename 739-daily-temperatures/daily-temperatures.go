@@ -40,6 +40,16 @@ func (s *stack) Head() int {
 }
 
 func dailyTemperatures(temperatures []int) []int {
+    // create new stack with []int
+    // for loop temperatures
+        // while stack is not empty
+            // get temperature of head
+            // if current temp > tempHead
+                // result[index of stack head] = current i - stack head
+                // pop stack
+            // else break (to escape while)
+        // push to stack
+
     result := make([]int, len(temperatures))
     stack := NewStack()
 
